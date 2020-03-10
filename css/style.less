@@ -1,0 +1,242 @@
+/*!
+
+    Charlotte Earle Photography
+    www.charlotteearle.com
+
+    Website by Hayden Barnett
+    www.haydenbarnett.com
+
+*/
+
+@import (less) "/normalize.css";
+@import (less) "/jquery.fancybox.css";
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+html {
+    overflow-y: scroll !important;
+    background-color: #000;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+a, a:visited {
+    color: #999;
+    text-decoration: none;
+    font-weight: 600;
+    -webkit-transition: color 0.4s ease, opacity 0.4s ease;
+    -moz-transition: color 0.4s ease, opacity 0.4s ease;
+    -ms-transition: color 0.4s ease, opacity 0.4s ease;
+    -o-transition: color 0.4s ease, opacity 0.4s ease;
+    transition: color 0.4s ease, opacity 0.4s ease;
+}
+a:hover {
+    color: #eee;
+    text-decoration: none;
+}
+a:focus,
+a:active {
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+#top {
+    width: 100%;    
+    min-width: 300px;
+    float: left;
+    margin: 0 auto;
+}
+
+#home {
+    &:hover {
+        img {
+            opacity: 1;
+        }
+        h1 span {
+            color: #999;
+        }
+    }
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    h1 {
+        float: left;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        text-transform: uppercase;        
+        margin: 20px 0 0 10px;
+        span {
+            color: #666;
+            float: left;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            -webkit-transition: color 0.4s ease-out;
+            -moz-transition: color 0.4s ease-out;
+            -ms-transition: color 0.4s ease-out;
+            -o-transition: color 0.4s ease-out;
+            transition: color 0.4s ease-out;
+        }
+    }
+    #logo {
+        margin-top: 21px;
+        margin-left: 60px;
+        float: left;
+        -webkit-transition: opacity 0.4s ease-out;
+        -moz-transition: opacity 0.4s ease-out;
+        -ms-transition: opacity 0.4s ease-out;
+        -o-transition: opacity 0.4s ease-out;
+        transition: opacity 0.4s ease-out;
+        opacity: 0.5;
+    }
+    ul {
+        padding: 0;
+        margin-top: 28px;
+        margin-right: 60px;
+        float: right;
+        display: inline-block;
+        li {
+            display: inline-block;
+            margin-left: 60px;
+            list-style: none;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+    }
+}
+
+header, footer {
+    ul {
+        li {
+            a {
+                font-weight: 600;
+                color: #bbb;
+                &:visited {
+                    color: #bbb;
+                }
+                &:hover {
+                    color: #eee;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    ul {
+        padding: 0;
+        margin: 0 auto;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        display: block;
+    }
+    li {
+        display: inline-block;
+        margin: 0 60px;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #444;
+        letter-spacing: 1px;
+        a  {
+            font-weight: 600;
+        }
+    }
+}  
+
+#tiles-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#tiles {
+    display: table;
+    width: 100%;
+}
+.tile {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    opacity: 0.8;
+    -webkit-filter: grayscale(100%);
+    margin-bottom: -5px;
+    &:hover {
+        opacity: 1;
+        -webkit-filter: grayscale(0%);
+    }
+}
+.tile-thumbnail {
+    width: 260px;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media (max-width: 870px) {
+    #home {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    header ul {
+        display: none;
+    }
+    footer ul {
+        padding-top: 20px;
+    }
+    footer ul li {
+        width: 100%;
+        margin: 0;
+        float: none;
+        text-align: center;
+    }
+    .tile-thumbnail {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        width: 280px;
+        margin: 0 auto;
+        #logo {
+            margin-left: 20px;
+        }
+    }
+    .tile-thumbnail {
+        width: 150px;
+        height: 150px;
+    }
+}
